@@ -1,0 +1,89 @@
+// Documentation
+
+/**
+ * University Package:
+ * 1. Person Class (Abstract):
+ *    - An abstract class representing a person with common attributes and methods.
+ *    - Attributes: name, age, address, email.
+ *    - Methods: abstract void displayDetails() (to be implemented by subclasses), getters and setters.
+ *
+ * 2. Student Class (Inherits from Person):
+ *    - A class representing a student, inherits from the Person class.
+ *    - Additional attributes: studentId, major, gpa.
+ *    - Methods: displayDetails (implementation of abstract method from Person).
+ *
+ * 3. Professor Class (Inherits from Person):
+ *    - A class representing a professor, inherits from the Person class.
+ *    - Additional attributes: employeeId, department, salary.
+ *    - Methods: displayDetails (implementation of abstract method from Person).
+ */
+
+/**
+ * Course Package:
+ * 4. Course Interface:
+ *    - An interface representing a course with methods for enrolling students and listing enrolled students.
+ *    - Methods: void enrollStudent(Student student) throws EnrollmentException, void listStudents().
+ *
+ * 5. CourseImpl Class (Implements Course):
+ *    - A class implementing the Course interface, representing a specific course.
+ *    - Attributes: courseName, enrolledStudents.
+ *    - Methods: implementation of enrollStudent (with exception handling) and listStudents.
+ *    - Custom Exception: EnrollmentException.
+ */
+
+/**
+ * Main Package:
+ * 6. UniversityTest Class (Main Class):
+ *    - A main class for testing the university system.
+ *    - Creates instances of students, professors, and courses.
+ *    - Enrolls students in courses and handles exceptions.
+ *    - Displays student and professor details.
+ *    - Lists students in courses.
+ */
+
+ Run command
+
+# Compile the source code
+javac -d out src/university/*.java src/course/*.java src/main/*.java
+
+# Run the main class
+java -cp out main.UniversityTest
+
+# Generate JavaDoc documentation
+javadoc -d doc -sourcepath src src/university/*.java src/course/*.java src/main/*.java
+
+# Running java docs
+cd doc
+start index.html
+
+
+The output you provided indicates that the program is working correctly. Let's break down the output:
+
+Student Details:
+
+yaml
+Copy code
+Student Details: John Doe, ID: 1001, Major: Computer Science, GPA: 3.8
+This line indicates the details of the first student, "John Doe," including the student's name, ID, major, and GPA.
+
+Professor Details:
+
+yaml
+Copy code
+Professor Details: Dr. Smith, Employee ID: 2001, Department: Mathematics, Salary: 80000.0
+This line indicates the details of the professor, "Dr. Smith," including the professor's name, employee ID, department, and salary.
+
+Enrolled students in Java Programming:
+
+yaml
+Copy code
+Enrolled students in Java Programming:
+John Doe
+Jane Smith
+This part of the output indicates the list of students enrolled in the "Java Programming" course. In this case, both "John Doe" and "Jane Smith" are enrolled.
+
+The output you provided aligns with the expected behavior of the program. It shows that students and professors are correctly instantiated, enrolled in courses, and their details are displayed. If you have any specific questions or if there's anything you would like to modify or add to the program, feel free to let me know!
+
+
+
+

@@ -1,0 +1,63 @@
+// Documentation
+
+/**
+ * University Package:
+ * 1. Person Class (Abstract):
+ *    - An abstract class representing a person with common attributes and methods.
+ *    - Attributes: name, age, address, email.
+ *    - Methods: abstract void displayDetails() (to be implemented by subclasses), getters and setters.
+ *
+ * 2. Student Class (Inherits from Person):
+ *    - A class representing a student, inherits from the Person class.
+ *    - Additional attributes: studentId, major, gpa.
+ *    - Methods: displayDetails (implementation of abstract method from Person).
+ *
+ * 3. Professor Class (Inherits from Person):
+ *    - A class representing a professor, inherits from the Person class.
+ *    - Additional attributes: employeeId, department, salary.
+ *    - Methods: displayDetails (implementation of abstract method from Person).
+ */
+
+/**
+ * Course Package:
+ * 4. Course Interface:
+ *    - An interface representing a course with methods for enrolling students and listing enrolled students.
+ *    - Methods: void enrollStudent(Student student) throws EnrollmentException, void listStudents().
+ *
+ * 5. CourseImpl Class (Implements Course):
+ *    - A class implementing the Course interface, representing a specific course.
+ *    - Attributes: courseName, enrolledStudents.
+ *    - Methods: implementation of enrollStudent (with exception handling) and listStudents.
+ *    - Custom Exception: EnrollmentException.
+ */
+
+/**
+ * Main Package:
+ * 6. UniversityTest Class (Main Class):
+ *    - A main class for testing the university system.
+ *    - Creates instances of students, professors, and courses.
+ *    - Enrolls students in courses and handles exceptions.
+ *    - Displays student and professor details.
+ *    - Lists students in courses.
+ */
+
+ Run command
+
+# Compile the source code
+javac -d out src/university/*.java src/course/*.java src/main/*.java
+
+# Run the main class
+java -cp out main.UniversityTest
+
+# Generate JavaDoc documentation
+javadoc -d doc -sourcepath src src/university/*.java src/course/*.java src/main/*.java
+
+# Running java docs
+cd doc
+start index.html
+
+
+
+
+
+
